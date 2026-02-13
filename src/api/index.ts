@@ -43,8 +43,8 @@ export const pocketIdApi = {
 		delete: (id: string) => del<void>(`/api/api-keys/${id}`),
 	},
 	appConfig: {
-		getPublic: () => get<AppConfigVariable[]>("/application-configuration"),
-		getAll: () => get<AppConfigVariable[]>("/application-configuration/all"),
+		getPublic: () => get<AppConfigVariable[]>("/api/application-configuration"),
+		getAll: () => get<AppConfigVariable[]>("/api/application-configuration/all"),
 		update: (body: Partial<AppConfigUpdateRequest>) => put<AppConfigVariable[]>("/api/application-configuration", body),
 		testEmail: (email?: string) =>
 			email
